@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -76,13 +77,15 @@
     <section id="forside" class="relative">
       <div class="relative h-[60vh] sm:h-[70vh]">
 
-        <!-- Use FULL-SIZE hero image here (not the .md thumbnail) -->
-        <img src="test.png"
+        <!-- Use FULL-SIZE hero image here -->
+        <img src="test3.png"
              alt="Fiskeriteknikk A/S hero image"
              class="absolute inset-0 w-full h-full object-cover object-center">
 
         <div class="absolute inset-0 flex items-center justify-center px-4">
-          <div class="w-full max-w-3xl bg-white/60 rounded-xl px-6 py-10 shadow-lg backdrop-blur-sm text-center">
+          <!-- CHANGED THIS LINE ONLY -->
+          <div class="bg-white/75 rounded-xl px-6 py-10 shadow-lg text-center
+                      w-full max-w-xl sm:max-w-2xl md:max-w-3xl md:w-auto">
 
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-[#105089]">
               FISKERITEKNIKK
@@ -175,7 +178,7 @@
     <section id="om-oss">
       <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold mb-6 tracking-wide">Om oss</h2>
-      <p class="mb-6">
+        <p class="mb-6">
           Fiskeriteknikk A/S ble etablert i 2016 i Lindesnes. Vi utvikler robust utstyr for fiskeflåten med fokus på
           kvalitet, trygghet og gode løsninger tilpasset hverdagen på sjøen.
         </p>
@@ -255,10 +258,17 @@
        class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 px-4">
     <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl leading-none">&times;</button>
     <button id="lightbox-prev"  class="absolute left-4 md:left-8 text-white text-3xl md:text-4xl font-bold">&#10094;</button>
-    <img id="lightbox-image"
-         src=""
-         alt=""
-         class="max-h-[80vh] max-w-full rounded shadow-lg object-contain">
+
+    <!-- Image + caption wrapper -->
+    <div class="flex flex-col items-center gap-4 max-w-3xl mx-auto text-center">
+      <img id="lightbox-image"
+           src=""
+           alt=""
+           class="max-h-[70vh] max-w-full rounded shadow-lg object-contain">
+      <p id="lightbox-caption"
+         class="text-sm md:text-base text-gray-100 leading-relaxed"></p>
+    </div>
+
     <button id="lightbox-next"  class="absolute right-4 md:right-8 text-white text-3xl md:text-4xl font-bold">&#10095;</button>
   </div>
 
@@ -273,7 +283,10 @@
         <svg xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 24 24" fill="currentColor"
              class="w-6 h-6">
-          <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 5 3.66 9.14 8.44 9.93v-7.03H8.08v-2.9h2.36V9.41c0-2.33 1.38-3.62 3.5-3.62.72 0 1.48.12 2.2.24v2.42h-1.24c-1.22 0-1.6.76-1.6 1.54v1.84h2.72l-.44 2.9h-2.28v7.03C18.34 21.21 22 17.07 22 12.07z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <circle cx="256" cy="256" r="256" fill="#0866FF"/>
+            <path fill="#FFFFFF" d="M355.5 330.7l11.4-74.3h-71.5v-48.2c0-20.3 10-40.1 42-40.1h32.5v-63.4s-29.5-5-57.8-5c-59 0-97.6 35.8-97.6 100.8v55.9h-65.6v74.3h65.6V512h78.7V330.7h61.8z"/>
+          </svg>
         </svg>
       </a>
     </div>
@@ -308,7 +321,7 @@
       });
     }
 
-    // ---- GALLERY CONFIG (PLACEHOLDERS) ----
+    // ---- GALLERY CONFIG (PLACEHOLDERS WITH CAPTIONS) ----
     const galleries = [
       {
         title: "«MS Øygutt» – Eier: Per Andersen",
@@ -317,22 +330,26 @@
           {
             thumb: "https://placehold.co/800x600?text=MS+Oygutt+1",
             full:  "https://placehold.co/1200x900?text=MS+Oygutt+1",
-            alt:   "MS Øygutt – bilde 1"
+            alt:   "MS Øygutt – bilde 1",
+            caption: "MS Øygutt – garnhaler i arbeid på dekk."
           },
           {
             thumb: "https://placehold.co/800x600?text=MS+Oygutt+2",
             full:  "https://placehold.co/1200x900?text=MS+Oygutt+2",
-            alt:   "MS Øygutt – bilde 2"
+            alt:   "MS Øygutt – bilde 2",
+            caption: "Oversiktsbilde fra hekken under innhenting."
           },
           {
             thumb: "https://placehold.co/800x600?text=MS+Oygutt+3",
             full:  "https://placehold.co/1200x900?text=MS+Oygutt+3",
-            alt:   "MS Øygutt – bilde 3"
+            alt:   "MS Øygutt – bilde 3",
+            caption: "Detalj av garnløpet gjennom haleren."
           },
           {
             thumb: "https://placehold.co/800x600?text=MS+Oygutt+4",
             full:  "https://placehold.co/1200x900?text=MS+Oygutt+4",
-            alt:   "MS Øygutt – bilde 4"
+            alt:   "MS Øygutt – bilde 4",
+            caption: "MS Øygutt ved kai etter endt fiske."
           }
         ]
       },
@@ -343,12 +360,14 @@
           {
             thumb: "https://placehold.co/800x600?text=Fjordbris+1",
             full:  "https://placehold.co/1200x900?text=Fjordbris+1",
-            alt:   "Fjordbris – bilde 1"
+            alt:   "Fjordbris – bilde 1",
+            caption: "Fjordbris med garngreier montert akter."
           },
           {
             thumb: "https://placehold.co/800x600?text=Fjordbris+2",
             full:  "https://placehold.co/1200x900?text=Fjordbris+2",
-            alt:   "Fjordbris – bilde 2"
+            alt:   "Fjordbris – bilde 2",
+            caption: "Garn på vei inn gjennom greieren."
           }
         ]
       },
@@ -359,12 +378,14 @@
           {
             thumb: "https://placehold.co/800x600?text=Havsønnen+1",
             full:  "https://placehold.co/1200x900?text=Havsønnen+1",
-            alt:   "Havsønnen – bilde 1"
+            alt:   "Havsønnen – bilde 1",
+            caption: "Havsønnen med ny garnhaler installert."
           },
           {
             thumb: "https://placehold.co/800x600?text=Havsønnen+2",
             full:  "https://placehold.co/1200x900?text=Havsønnen+2",
-            alt:   "Havsønnen – bilde 2"
+            alt:   "Havsønnen – bilde 2",
+            caption: "Nærtak av styringspanel og hydraulikk."
           }
         ]
       }
@@ -401,16 +422,21 @@
       galleryContainer.insertAdjacentHTML("beforeend", cardHtml);
     });
 
-    // Prepare lightbox groups
+    // Prepare lightbox groups with captions
     const groups = galleries.map(g =>
-      g.images.map(img => ({ src: img.full, alt: img.alt }))
+      g.images.map(img => ({
+        src: img.full,
+        alt: img.alt,
+        caption: img.caption || ""
+      }))
     );
 
-    const lightbox    = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-image");
-    const btnClose    = document.getElementById("lightbox-close");
-    const btnPrev     = document.getElementById("lightbox-prev");
-    const btnNext     = document.getElementById("lightbox-next");
+    const lightbox        = document.getElementById("lightbox");
+    const lightboxImg     = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const btnClose        = document.getElementById("lightbox-close");
+    const btnPrev         = document.getElementById("lightbox-prev");
+    const btnNext         = document.getElementById("lightbox-next");
 
     let currentGroup = 0;
     let currentIndex = 0;
@@ -420,6 +446,7 @@
       if (!item) return;
       lightboxImg.src = item.src;
       lightboxImg.alt = item.alt;
+      lightboxCaption.textContent = item.caption || "";
     }
 
     function openLightbox(groupIdx, imgIdx) {
@@ -435,6 +462,7 @@
       lightbox.classList.remove("flex");
       lightboxImg.src = "";
       lightboxImg.alt = "";
+      lightboxCaption.textContent = "";
     }
 
     function changeImage(delta) {
@@ -470,3 +498,4 @@
 
 </body>
 </html>
+```
