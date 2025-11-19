@@ -6,15 +6,10 @@
   <meta name="description" content="Innovative garnhalere og dekksutstyr for fiskebåter." />
   <title>Fiskeriteknikk</title>
 
-  <!-- Website Icon (Favicon) -->
   <link rel="icon" type="image/png" href="https://iili.io/fdEziXI.th.png">
-
-  <!-- Inter Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Restore default link blue + apply Inter -->
   <style>
     * { font-family: 'Inter', sans-serif; }
     a { color: -webkit-link; }
@@ -24,28 +19,30 @@
 
 <body class="font-sans text-gray-900 antialiased flex flex-col min-h-screen pb-16">
 
-  <!-- Navigation -->
+  <!-- NAVIGATION -->
   <nav class="bg-white text-blue-900 sticky top-0 z-50 shadow">
     <div class="container mx-auto px-4 py-3 flex items-center justify-center relative">
 
-      <!-- LOGO LEFT, OUTSIDE FLOW -->
-      <a href="#forside" class="flex items-center absolute left-4 md:left-6">
+      <!-- LOGO LEFT -->
+      <a href="#forside" class="absolute left-4 md:left-6">
         <img src="https://iili.io/fdEziXI.th.png"
-             alt="Fiskeriteknikk A/S logo"
+             alt="Fiskeriteknikk logo"
              class="h-12 w-auto">
       </a>
 
-      <!-- NAV LINKS CENTERED -->
+      <!-- CENTERED NAV -->
       <ul class="flex items-center gap-6 text-lg font-semibold tracking-wide">
+        <li><a href="#forside">FORSIDE</a></li>
+        <li><a href="#produkter">PRODUKTER</a></li>
         <li><a href="#galleri">GALLERI</a></li>
         <li><a href="#om-oss">OM OSS</a></li>
         <li><a href="#kontakt">KONTAKT</a></li>
       </ul>
-
     </div>
   </nav>
 
   <main class="flex-1">
+
     <!-- HERO -->
     <section id="forside" class="relative">
       <div class="relative h-[60vh] sm:h-[70vh]">
@@ -55,44 +52,60 @@
              class="absolute inset-0 w-full h-full object-cover">
 
         <div class="absolute inset-0 flex items-center justify-center px-4">
-          <div class="w-full max-w-3xl">
+          <div class="w-full max-w-3xl bg-blue-900/80 rounded-xl px-6 py-10 shadow-lg backdrop-blur-sm text-white text-center">
 
-            <div class="bg-blue-900/80 rounded-xl px-6 py-8 md:px-10 md:py-10 shadow-lg backdrop-blur-sm text-white text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">FISKERITEKNIKK</h1>
+            <h2 class="text-xl sm:text-2xl md:text-3xl italic mb-4">«Laget av fiskere, for fiskere!»</h2>
 
-              <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-                FISKERITEKNIKK
-              </h1>
+            <p class="text-lg md:text-xl mb-3">Innovativt mekanisk verksted med fokus på fiskebåter!</p>
+            <p class="text-lg md:text-xl mb-5">Utvikler garnhalere og annet dekksutstyr.</p>
 
-              <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 italic">
-                «Laget av fiskere, for fiskere!»
-              </h2>
+            <a href="#kontakt"
+               class="inline-block text-white font-semibold py-3 px-8 rounded-md"
+               style="background-color:#2596be;">Kontakt</a>
 
-              <p class="text-base sm:text-lg md:text-xl mb-3 leading-relaxed">
-                Innovativt mekanisk verksted med fokus på fiskebåter!
-              </p>
-
-              <p class="text-base sm:text-lg md:text-xl mb-5 leading-relaxed">
-                Utvikler garnhalere og annet dekksutstyr.
-              </p>
-
-              <p class="text-base sm:text-lg mb-6 leading-relaxed">
-                Kontakt oss i dag for et godt tilbud!
-              </p>
-
-              <a href="#kontakt"
-                 class="inline-block text-white font-semibold py-3 px-8 rounded-md text-base sm:text-lg"
-                 style="background-color:#2596be;">
-                Kontakt
-              </a>
-
-            </div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ⭐ GALLERY SECTION -->
+    <!-- PRODUKTER -->
+    <section id="produkter" class="bg-gray-50">
+      <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-8 tracking-wide">Produkter</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <article class="bg-white p-6 rounded shadow">
+            <img src="https://placehold.co/400x300?text=Garnhaler+600kg"
+                 class="mb-4 w-full rounded"
+                 alt="Garnhaler 600 kg">
+            <h3 class="text-xl font-semibold mb-2">Garnhaler 600 kg</h3>
+            <p class="text-gray-800">Kompakt garnhaler for mindre fiskebåter. Kapasitet opptil 600 kg.</p>
+          </article>
+
+          <article class="bg-white p-6 rounded shadow">
+            <img src="https://placehold.co/400x300?text=Garnhaler+1200kg"
+                 class="mb-4 w-full rounded"
+                 alt="Garnhaler 1200 kg">
+            <h3 class="text-xl font-semibold mb-2">Garnhaler 1200 kg</h3>
+            <p class="text-gray-800">Kraftig garnhaler for større kystfiskebåter. Trekkapasitet 1200 kg.</p>
+          </article>
+
+          <article class="bg-white p-6 rounded shadow">
+            <img src="https://placehold.co/400x300?text=Garngreier"
+                 class="mb-4 w-full rounded"
+                 alt="Garngreier">
+            <h3 class="text-xl font-semibold mb-2">Garngreier</h3>
+            <p class="text-gray-800">Automatiserer innsamling av garnet og hindrer floker.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERI -->
     <section id="galleri" class="bg-gray-50">
       <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold mb-8 tracking-wide">Galleri</h2>
@@ -101,129 +114,20 @@
           Bilder fra våre kunder – med deres båter, garnhalere og dekksutstyr i bruk.
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          <!-- CUSTOMER 1 -->
-          <article class="bg-white p-6 rounded shadow flex flex-col">
-            <!-- Visible thumbs (1 row) -->
-            <div class="grid grid-cols-2 gap-3 mb-4">
-              <button class="gallery-thumb block"
-                      data-group="g1" data-index="0"
-                      data-src="https://placehold.co/800x600?text=MS+Oygutt+1">
-                <img src="https://placehold.co/400x300?text=MS+Oygutt+1"
-                     alt="MS Øygutt – bilde 1"
-                     class="w-full rounded object-cover">
-              </button>
-
-              <button class="gallery-thumb block"
-                      data-group="g1" data-index="1"
-                      data-src="https://placehold.co/800x600?text=MS+Oygutt+2">
-                <img src="https://placehold.co/400x300?text=MS+Oygutt+2"
-                     alt="MS Øygutt – bilde 2"
-                     class="w-full rounded object-cover">
-              </button>
-            </div>
-
-            <!-- Extra images for lightbox only (not shown in layout) -->
-            <div class="hidden">
-              <button class="gallery-thumb"
-                      data-group="g1" data-index="2"
-                      data-src="https://placehold.co/800x600?text=MS+Oygutt+3"></button>
-              <button class="gallery-thumb"
-                      data-group="g1" data-index="3"
-                      data-src="https://placehold.co/800x600?text=MS+Oygutt+4"></button>
-            </div>
-
-            <h3 class="text-xl font-semibold mb-1">
-              «MS Øygutt» – Eier: Per Andersen
-            </h3>
-
-            <p class="text-gray-800">
-              1200&nbsp;kg garnhaler brukt på kystfiske etter torsk og sei. Bildene er sendt inn fra Nordland, der båten går i daglig drift.
-            </p>
-          </article>
-
-          <!-- CUSTOMER 2 -->
-          <article class="bg-white p-6 rounded shadow flex flex-col">
-            <div class="grid grid-cols-2 gap-3 mb-4">
-              <button class="gallery-thumb block"
-                      data-group="g2" data-index="0"
-                      data-src="https://placehold.co/800x600?text=Fjordbris+1">
-                <img src="https://placehold.co/400x300?text=Fjordbris+1"
-                     alt="Fjordbris – bilde 1"
-                     class="w-full rounded object-cover">
-              </button>
-
-              <button class="gallery-thumb block"
-                      data-group="g2" data-index="1"
-                      data-src="https://placehold.co/800x600?text=Fjordbris+2">
-                <img src="https://placehold.co/400x300?text=Fjordbris+2"
-                     alt="Fjordbris – bilde 2"
-                     class="w-full rounded object-cover">
-              </button>
-            </div>
-
-            <!-- More hidden images if needed -->
-            <div class="hidden">
-              <!-- example:
-              <button class="gallery-thumb"
-                      data-group="g2" data-index="2"
-                      data-src="..."></button>
-              -->
-            </div>
-
-            <h3 class="text-xl font-semibold mb-1">
-              «Fjordbris» – Eier: Arne Berg
-            </h3>
-
-            <p class="text-gray-800">
-              Garngreier montert på hekken for effektiv håndtering av garn. Kunden opplever mindre floker og raskere innhenting.
-            </p>
-          </article>
-
-          <!-- CUSTOMER 3 -->
-          <article class="bg-white p-6 rounded shadow flex flex-col">
-            <div class="grid grid-cols-2 gap-3 mb-4">
-              <button class="gallery-thumb block"
-                      data-group="g3" data-index="0"
-                      data-src="https://placehold.co/800x600?text=Havsonnen+1">
-                <img src="https://placehold.co/400x300?text=Havsonnen+1"
-                     alt="Havsønnen – bilde 1"
-                     class="w-full rounded object-cover">
-              </button>
-
-              <button class="gallery-thumb block"
-                      data-group="g3" data-index="1"
-                      data-src="https://placehold.co/800x600?text=Havsonnen+2">
-                <img src="https://placehold.co/400x300?text=Havsonnen+2"
-                     alt="Havsønnen – bilde 2"
-                     class="w-full rounded object-cover">
-              </button>
-            </div>
-
-            <div class="hidden">
-              <!-- extra hidden images for g3 if you want -->
-            </div>
-
-            <h3 class="text-xl font-semibold mb-1">
-              «Havsønnen» – Eier: Kjetil Hansen
-            </h3>
-
-            <p class="text-gray-800">
-              Komplett rigg med garnhaler og styringspanel levert i 2024. Bildene viser systemet i bruk på feltet.
-            </p>
-          </article>
-
+        <div id="gallery-container"
+             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Filled by JS -->
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- OM OSS -->
     <section id="om-oss">
       <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold mb-6 tracking-wide">Om oss</h2>
         <p class="mb-6">
-          Fiskeriteknikk A/S ble etablert i 2016 i Lindesnes. Vi utvikler robust utstyr for fiskeflåten med fokus på kvalitet, trygghet og gode løsninger tilpasset hverdagen på sjøen.
+          Fiskeriteknikk A/S ble etablert i 2016 i Lindesnes. Vi utvikler robust utstyr for fiskeflåten med fokus på
+          kvalitet, trygghet og gode løsninger tilpasset hverdagen på sjøen.
         </p>
 
         <h3 class="text-2xl font-semibold mb-4">Hvorfor velge oss?</h3>
@@ -236,14 +140,13 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- KONTAKT -->
     <section id="kontakt" class="bg-gray-50">
       <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold mb-8 tracking-wide">Kontakt</h2>
 
         <div class="space-y-8">
 
-          <!-- INFO + MAP -->
           <div>
             <div class="space-y-3">
               <p><span class="font-semibold">Adresse:</span> Bålyveien 23, 4521 Spangereid</p>
@@ -264,75 +167,55 @@
             </div>
           </div>
 
-          <!-- FORM -->
-          <div>
-            <form
-              action="https://formspree.io/f/mnnwpzjw"
-              method="POST"
-              class="bg-white p-6 rounded shadow space-y-4"
-            >
-              <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
-                <div>
-                  <label class="block font-medium mb-1" for="navn">Navn</label>
-                  <input id="navn" name="navn" required
-                         class="w-full border px-3 py-2 rounded" />
-                </div>
-                <div>
-                  <label class="block font-medium mb-1" for="email">E-post</label>
-                  <input id="email" name="email" type="email" required
-                         class="w-full border px-3 py-2 rounded" />
-                </div>
-              </div>
-
+          <form
+            action="https://formspree.io/f/mnnwpzjw"
+            method="POST"
+            class="bg-white p-6 rounded shadow space-y-4"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label class="block font-medium mb-1" for="melding">Melding</label>
-                <textarea id="melding" name="message" rows="5" required
-                          class="w-full border px-3 py-2 rounded"></textarea>
+                <label class="block font-medium mb-1" for="navn">Navn</label>
+                <input id="navn" name="navn" required class="w-full border px-3 py-2 rounded">
               </div>
+              <div>
+                <label class="block font-medium mb-1" for="email">E-post</label>
+                <input id="email" name="email" type="email" required class="w-full border px-3 py-2 rounded">
+              </div>
+            </div>
 
-              <button type="submit"
-                      class="bg-blue-900 text-white py-2 px-6 rounded hover:bg-blue-800">
-                Send
-              </button>
-            </form>
-          </div>
+            <div>
+              <label class="block font-medium mb-1" for="melding">Melding</label>
+              <textarea id="melding" name="message" rows="5" required class="w-full border px-3 py-2 rounded"></textarea>
+            </div>
+
+            <button type="submit"
+                    class="bg-blue-900 text-white py-2 px-6 rounded hover:bg-blue-800">
+              Send
+            </button>
+          </form>
 
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- LIGHTBOX OVERLAY -->
+  <!-- LIGHTBOX -->
   <div id="lightbox"
        class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 px-4">
-    <button id="lightbox-close"
-            class="absolute top-4 right-4 text-white text-3xl leading-none">
-      &times;
-    </button>
-
-    <button id="lightbox-prev"
-            class="absolute left-4 md:left-8 text-white text-3xl md:text-4xl font-bold select-none">
-      &#10094;
-    </button>
-
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl leading-none">&times;</button>
+    <button id="lightbox-prev"  class="absolute left-4 md:left-8 text-white text-3xl md:text-4xl font-bold">&#10094;</button>
     <img id="lightbox-image"
          src=""
          alt=""
          class="max-h-[80vh] max-w-full rounded shadow-lg object-contain">
-
-    <button id="lightbox-next"
-            class="absolute right-4 md:right-8 text-white text-3xl md:text-4xl font-bold select-none">
-      &#10095;
-    </button>
+    <button id="lightbox-next"  class="absolute right-4 md:right-8 text-white text-3xl md:text-4xl font-bold">&#10095;</button>
   </div>
 
-  <!-- STICKY FOOTER -->
+  <!-- FOOTER -->
   <footer class="fixed bottom-0 left-0 right-0 bg-blue-900 text-white text-sm shadow-inner">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
-      <p>
-        © <span id="year"></span> Fiskeriteknikk A/S
-      </p>
-
+      <p>© <span id="year"></span> Fiskeriteknikk A/S</p>
       <a href="https://www.facebook.com/fiskeriteknikk"
          target="_blank"
          aria-label="Fiskeriteknikk A/S på Facebook"
@@ -347,82 +230,166 @@
   </footer>
 
   <script>
-    // Dynamic year in footer
+    // Dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Simple lightbox logic
-    const thumbs = document.querySelectorAll('.gallery-thumb');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const btnClose = document.getElementById('lightbox-close');
-    const btnPrev = document.getElementById('lightbox-prev');
-    const btnNext = document.getElementById('lightbox-next');
+    // ---- GALLERY CONFIG (PLACEHOLDERS) ----
+    const galleries = [
+      {
+        title: "«MS Øygutt» – Eier: Per Andersen",
+        text: "1200 kg garnhaler brukt på kystfiske etter torsk og sei. Bildene er sendt inn fra Nordland, der båten går i daglig drift.",
+        images: [
+          {
+            thumb: "https://placehold.co/800x600?text=MS+Oygutt+1",
+            full:  "https://placehold.co/1200x900?text=MS+Oygutt+1",
+            alt:   "MS Øygutt – bilde 1"
+          },
+          {
+            thumb: "https://placehold.co/800x600?text=MS+Oygutt+2",
+            full:  "https://placehold.co/1200x900?text=MS+Oygutt+2",
+            alt:   "MS Øygutt – bilde 2"
+          },
+          {
+            thumb: "https://placehold.co/800x600?text=MS+Oygutt+3",
+            full:  "https://placehold.co/1200x900?text=MS+Oygutt+3",
+            alt:   "MS Øygutt – bilde 3"
+          },
+          {
+            thumb: "https://placehold.co/800x600?text=MS+Oygutt+4",
+            full:  "https://placehold.co/1200x900?text=MS+Oygutt+4",
+            alt:   "MS Øygutt – bilde 4"
+          }
+        ]
+      },
+      {
+        title: "«Fjordbris» – Eier: Arne Berg",
+        text: "Garngreier montert på hekken for effektiv håndtering av garn. Kunden opplever mindre floker og raskere innhenting.",
+        images: [
+          {
+            thumb: "https://placehold.co/800x600?text=Fjordbris+1",
+            full:  "https://placehold.co/1200x900?text=Fjordbris+1",
+            alt:   "Fjordbris – bilde 1"
+          },
+          {
+            thumb: "https://placehold.co/800x600?text=Fjordbris+2",
+            full:  "https://placehold.co/1200x900?text=Fjordbris+2",
+            alt:   "Fjordbris – bilde 2"
+          }
+        ]
+      },
+      {
+        title: "«Havsønnen» – Eier: Kjetil Hansen",
+        text: "Komplett rigg med garnhaler og styringspanel levert i 2024. Bildene viser systemet i bruk på feltet.",
+        images: [
+          {
+            thumb: "https://placehold.co/800x600?text=Havsønnen+1",
+            full:  "https://placehold.co/1200x900?text=Havsønnen+1",
+            alt:   "Havsønnen – bilde 1"
+          },
+          {
+            thumb: "https://placehold.co/800x600?text=Havsønnen+2",
+            full:  "https://placehold.co/1200x900?text=Havsønnen+2",
+            alt:   "Havsønnen – bilde 2"
+          }
+        ]
+      }
+    ];
 
-    // Groups: { g1: [src, src, ...], g2: [...] }
-    const groups = {};
-    thumbs.forEach(btn => {
-      const group = btn.dataset.group;
-      const index = parseInt(btn.dataset.index, 10);
-      const src = btn.dataset.src;
+    // Build gallery cards (1 main image per card, +X badge if more)
+    const galleryContainer = document.getElementById("gallery-container");
 
-      if (!groups[group]) groups[group] = [];
-      groups[group][index] = src;
+    galleries.forEach((g, groupIndex) => {
+      const main = g.images[0];
+      const extraCount = g.images.length - 1;
+
+      const badge = extraCount > 0
+        ? `<span class="absolute bottom-2 right-2 bg-black/75 text-white text-xs px-2 py-1 rounded-full">
+             +${extraCount} bilder
+           </span>`
+        : "";
+
+      const cardHtml = `
+        <article class="bg-white p-6 rounded shadow flex flex-col">
+          <button class="relative block mb-4 gallery-thumb"
+                  data-group="${groupIndex}"
+                  data-index="0">
+            <img src="${main.thumb}"
+                 alt="${main.alt}"
+                 class="w-full h-56 md:h-60 rounded object-cover">
+            ${badge}
+          </button>
+          <h3 class="text-xl font-semibold mb-1">${g.title}</h3>
+          <p class="text-gray-800">${g.text}</p>
+        </article>
+      `;
+
+      galleryContainer.insertAdjacentHTML("beforeend", cardHtml);
     });
 
-    let currentGroup = null;
+    // Prepare lightbox groups
+    const groups = galleries.map(g =>
+      g.images.map(img => ({ src: img.full, alt: img.alt }))
+    );
+
+    const lightbox    = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-image");
+    const btnClose    = document.getElementById("lightbox-close");
+    const btnPrev     = document.getElementById("lightbox-prev");
+    const btnNext     = document.getElementById("lightbox-next");
+
+    let currentGroup = 0;
     let currentIndex = 0;
 
-    function openLightbox(group, index) {
-      currentGroup = group;
-      currentIndex = index;
-      const src = groups[group][index];
-      if (!src) return;
+    function showLightboxImage() {
+      const item = groups[currentGroup][currentIndex];
+      if (!item) return;
+      lightboxImg.src = item.src;
+      lightboxImg.alt = item.alt;
+    }
 
-      lightboxImage.src = src;
-      lightbox.classList.remove('hidden');
-      lightbox.classList.add('flex');
+    function openLightbox(groupIdx, imgIdx) {
+      currentGroup = groupIdx;
+      currentIndex = imgIdx;
+      showLightboxImage();
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
     }
 
     function closeLightbox() {
-      lightbox.classList.remove('flex');
-      lightbox.classList.add('hidden');
-      lightboxImage.src = '';
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+      lightboxImg.src = "";
+      lightboxImg.alt = "";
     }
 
-    function showNext(delta) {
-      if (!currentGroup) return;
-      const arr = groups[currentGroup];
-      const len = arr.length;
-      if (!len) return;
-
+    function changeImage(delta) {
+      const len = groups[currentGroup].length;
       currentIndex = (currentIndex + delta + len) % len;
-      lightboxImage.src = arr[currentIndex];
+      showLightboxImage();
     }
 
-    thumbs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const group = btn.dataset.group;
-        const index = parseInt(btn.dataset.index, 10);
-        openLightbox(group, index);
-      });
+    // Attach events to thumbs
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".gallery-thumb");
+      if (!btn) return;
+      const gIdx = parseInt(btn.dataset.group, 10);
+      const iIdx = parseInt(btn.dataset.index, 10);
+      openLightbox(gIdx, iIdx);
     });
 
-    btnClose.addEventListener('click', closeLightbox);
-    btnPrev.addEventListener('click', () => showNext(-1));
-    btnNext.addEventListener('click', () => showNext(1));
+    btnClose.addEventListener("click", closeLightbox);
+    btnPrev.addEventListener("click", () => changeImage(-1));
+    btnNext.addEventListener("click", () => changeImage(1));
 
-    // Close on click outside image
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) closeLightbox();
     });
 
-    // ESC / arrows
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') showNext(-1);
-      if (e.key === 'ArrowRight') showNext(1);
+    document.addEventListener("keydown", e => {
+      if (lightbox.classList.contains("hidden")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") changeImage(-1);
+      if (e.key === "ArrowRight") changeImage(1);
     });
   </script>
 
