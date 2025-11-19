@@ -21,16 +21,16 @@
 
   <!-- NAVIGATION -->
   <nav class="bg-white text-blue-900 sticky top-0 z-50 shadow">
-    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
 
-      <!-- LOGO LEFT -->
-      <a href="#forside" class="flex items-center">
+      <!-- LOGO LEFT (normal on mobile, absolute on desktop) -->
+      <a href="#forside" class="flex items-center md:absolute md:left-4">
         <img src="https://iili.io/fdEziXI.th.png"
              alt="Fiskeriteknikk logo"
              class="h-12 w-auto">
       </a>
 
-      <!-- DESKTOP NAV -->
+      <!-- DESKTOP NAV (centered) -->
       <ul class="hidden md:flex items-center gap-6 text-lg font-semibold tracking-wide">
         <li><a href="#forside">FORSIDE</a></li>
         <li><a href="#produkter">PRODUKTER</a></li>
@@ -39,7 +39,7 @@
         <li><a href="#kontakt">KONTAKT</a></li>
       </ul>
 
-      <!-- MOBILE HAMBURGER -->
+      <!-- MOBILE HAMBURGER (visible only < md) -->
       <button id="nav-toggle"
               class="md:hidden inline-flex items-center justify-center p-2 rounded border border-blue-900/40 text-blue-900 bg-white shadow-sm"
               aria-label="Åpne meny"
