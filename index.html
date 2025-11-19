@@ -26,18 +26,18 @@
 
   <!-- Navigation -->
   <nav class="bg-white text-blue-900 sticky top-0 z-50 shadow">
-    <div class="container mx-auto px-4 py-3 flex flex-col items-center gap-3">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-center relative">
 
-      <!-- LOGO -->
-      <a href="#forside">
+      <!-- LOGO LEFT, OUTSIDE FLOW -->
+      <a href="#forside" class="flex items-center absolute left-4 md:left-6">
         <img src="https://iili.io/fdEziXI.th.png"
              alt="Fiskeriteknikk A/S logo"
-             class="h-12 w-auto mx-auto">
+             class="h-12 w-auto">
       </a>
 
-      <!-- NAV LINKS centered in their own row -->
-      <ul class="flex items-center justify-center gap-6 text-lg font-semibold tracking-wide mt-2">
-        <li><a href="#produkter">PRODUKTER</a></li>
+      <!-- NAV LINKS CENTERED -->
+      <ul class="flex items-center gap-6 text-lg font-semibold tracking-wide">
+        <li><a href="#galleri">GALLERI</a></li>
         <li><a href="#om-oss">OM OSS</a></li>
         <li><a href="#kontakt">KONTAKT</a></li>
       </ul>
@@ -63,7 +63,6 @@
                 FISKERITEKNIKK
               </h1>
 
-              <!-- SLOGAN -->
               <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 italic">
                 «Laget av fiskere, for fiskere!»
               </h2>
@@ -93,32 +92,126 @@
       </div>
     </section>
 
-    <!-- PRODUCTS -->
-    <section id="produkter" class="bg-gray-50">
+    <!-- ⭐ GALLERY SECTION -->
+    <section id="galleri" class="bg-gray-50">
       <div class="container mx-auto px-4 py-12">
-        <h2 class="text-3xl font-bold mb-8 tracking-wide">Produkter</h2>
+        <h2 class="text-3xl font-bold mb-8 tracking-wide">Galleri</h2>
+
+        <p class="mb-8 text-gray-700">
+          Bilder fra våre kunder – med deres båter, garnhalere og dekksutstyr i bruk.
+        </p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <article class="bg-white p-6 rounded shadow">
-            <img src="https://placehold.co/400x300?text=Garnhaler+600kg"
-                 class="mb-4 w-full" alt="Garnhaler 600 kg">
-            <h3 class="text-xl font-semibold mb-2">Garnhaler 600&nbsp;kg</h3>
-            <p class="text-gray-800">Kompakt garnhaler for mindre fiskebåter. Kapasitet opptil 600&nbsp;kg.</p>
+          <!-- CUSTOMER 1 -->
+          <article class="bg-white p-6 rounded shadow flex flex-col">
+            <!-- Visible thumbs (1 row) -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <button class="gallery-thumb block"
+                      data-group="g1" data-index="0"
+                      data-src="https://placehold.co/800x600?text=MS+Oygutt+1">
+                <img src="https://placehold.co/400x300?text=MS+Oygutt+1"
+                     alt="MS Øygutt – bilde 1"
+                     class="w-full rounded object-cover">
+              </button>
+
+              <button class="gallery-thumb block"
+                      data-group="g1" data-index="1"
+                      data-src="https://placehold.co/800x600?text=MS+Oygutt+2">
+                <img src="https://placehold.co/400x300?text=MS+Oygutt+2"
+                     alt="MS Øygutt – bilde 2"
+                     class="w-full rounded object-cover">
+              </button>
+            </div>
+
+            <!-- Extra images for lightbox only (not shown in layout) -->
+            <div class="hidden">
+              <button class="gallery-thumb"
+                      data-group="g1" data-index="2"
+                      data-src="https://placehold.co/800x600?text=MS+Oygutt+3"></button>
+              <button class="gallery-thumb"
+                      data-group="g1" data-index="3"
+                      data-src="https://placehold.co/800x600?text=MS+Oygutt+4"></button>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-1">
+              «MS Øygutt» – Eier: Per Andersen
+            </h3>
+
+            <p class="text-gray-800">
+              1200&nbsp;kg garnhaler brukt på kystfiske etter torsk og sei. Bildene er sendt inn fra Nordland, der båten går i daglig drift.
+            </p>
           </article>
 
-          <article class="bg-white p-6 rounded shadow">
-            <img src="https://placehold.co/400x300?text=Garnhaler+1200kg"
-                 class="mb-4 w-full" alt="Garnhaler 1200 kg">
-            <h3 class="text-xl font-semibold mb-2">Garnhaler 1200&nbsp;kg</h3>
-            <p class="text-gray-800">Kraftig garnhaler for større kystfiskebåter. Trekkapasitet 1200&nbsp;kg.</p>
+          <!-- CUSTOMER 2 -->
+          <article class="bg-white p-6 rounded shadow flex flex-col">
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <button class="gallery-thumb block"
+                      data-group="g2" data-index="0"
+                      data-src="https://placehold.co/800x600?text=Fjordbris+1">
+                <img src="https://placehold.co/400x300?text=Fjordbris+1"
+                     alt="Fjordbris – bilde 1"
+                     class="w-full rounded object-cover">
+              </button>
+
+              <button class="gallery-thumb block"
+                      data-group="g2" data-index="1"
+                      data-src="https://placehold.co/800x600?text=Fjordbris+2">
+                <img src="https://placehold.co/400x300?text=Fjordbris+2"
+                     alt="Fjordbris – bilde 2"
+                     class="w-full rounded object-cover">
+              </button>
+            </div>
+
+            <!-- More hidden images if needed -->
+            <div class="hidden">
+              <!-- example:
+              <button class="gallery-thumb"
+                      data-group="g2" data-index="2"
+                      data-src="..."></button>
+              -->
+            </div>
+
+            <h3 class="text-xl font-semibold mb-1">
+              «Fjordbris» – Eier: Arne Berg
+            </h3>
+
+            <p class="text-gray-800">
+              Garngreier montert på hekken for effektiv håndtering av garn. Kunden opplever mindre floker og raskere innhenting.
+            </p>
           </article>
 
-          <article class="bg-white p-6 rounded shadow">
-            <img src="https://placehold.co/400x300?text=Garngreier"
-                 class="mb-4 w-full" alt="Garngreier">
-            <h3 class="text-xl font-semibold mb-2">Garngreier</h3>
-            <p class="text-gray-800">Automatiserer innsamling av garnet og hindrer floker.</p>
+          <!-- CUSTOMER 3 -->
+          <article class="bg-white p-6 rounded shadow flex flex-col">
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <button class="gallery-thumb block"
+                      data-group="g3" data-index="0"
+                      data-src="https://placehold.co/800x600?text=Havsonnen+1">
+                <img src="https://placehold.co/400x300?text=Havsonnen+1"
+                     alt="Havsønnen – bilde 1"
+                     class="w-full rounded object-cover">
+              </button>
+
+              <button class="gallery-thumb block"
+                      data-group="g3" data-index="1"
+                      data-src="https://placehold.co/800x600?text=Havsonnen+2">
+                <img src="https://placehold.co/400x300?text=Havsonnen+2"
+                     alt="Havsønnen – bilde 2"
+                     class="w-full rounded object-cover">
+              </button>
+            </div>
+
+            <div class="hidden">
+              <!-- extra hidden images for g3 if you want -->
+            </div>
+
+            <h3 class="text-xl font-semibold mb-1">
+              «Havsønnen» – Eier: Kjetil Hansen
+            </h3>
+
+            <p class="text-gray-800">
+              Komplett rigg med garnhaler og styringspanel levert i 2024. Bildene viser systemet i bruk på feltet.
+            </p>
           </article>
 
         </div>
@@ -159,7 +252,6 @@
             </div>
 
             <div class="mt-8">
-              <!-- MAP -->
               <iframe
                 width="100%"
                 height="350"
@@ -210,6 +302,30 @@
     </section>
   </main>
 
+  <!-- LIGHTBOX OVERLAY -->
+  <div id="lightbox"
+       class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 px-4">
+    <button id="lightbox-close"
+            class="absolute top-4 right-4 text-white text-3xl leading-none">
+      &times;
+    </button>
+
+    <button id="lightbox-prev"
+            class="absolute left-4 md:left-8 text-white text-3xl md:text-4xl font-bold select-none">
+      &#10094;
+    </button>
+
+    <img id="lightbox-image"
+         src=""
+         alt=""
+         class="max-h-[80vh] max-w-full rounded shadow-lg object-contain">
+
+    <button id="lightbox-next"
+            class="absolute right-4 md:right-8 text-white text-3xl md:text-4xl font-bold select-none">
+      &#10095;
+    </button>
+  </div>
+
   <!-- STICKY FOOTER -->
   <footer class="fixed bottom-0 left-0 right-0 bg-blue-900 text-white text-sm shadow-inner">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
@@ -217,7 +333,6 @@
         © <span id="year"></span> Fiskeriteknikk A/S
       </p>
 
-      <!-- FB ICON in footer on the right -->
       <a href="https://www.facebook.com/fiskeriteknikk"
          target="_blank"
          aria-label="Fiskeriteknikk A/S på Facebook"
@@ -232,10 +347,84 @@
   </footer>
 
   <script>
+    // Dynamic year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple lightbox logic
+    const thumbs = document.querySelectorAll('.gallery-thumb');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const btnClose = document.getElementById('lightbox-close');
+    const btnPrev = document.getElementById('lightbox-prev');
+    const btnNext = document.getElementById('lightbox-next');
+
+    // Groups: { g1: [src, src, ...], g2: [...] }
+    const groups = {};
+    thumbs.forEach(btn => {
+      const group = btn.dataset.group;
+      const index = parseInt(btn.dataset.index, 10);
+      const src = btn.dataset.src;
+
+      if (!groups[group]) groups[group] = [];
+      groups[group][index] = src;
+    });
+
+    let currentGroup = null;
+    let currentIndex = 0;
+
+    function openLightbox(group, index) {
+      currentGroup = group;
+      currentIndex = index;
+      const src = groups[group][index];
+      if (!src) return;
+
+      lightboxImage.src = src;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('flex');
+      lightbox.classList.add('hidden');
+      lightboxImage.src = '';
+    }
+
+    function showNext(delta) {
+      if (!currentGroup) return;
+      const arr = groups[currentGroup];
+      const len = arr.length;
+      if (!len) return;
+
+      currentIndex = (currentIndex + delta + len) % len;
+      lightboxImage.src = arr[currentIndex];
+    }
+
+    thumbs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const group = btn.dataset.group;
+        const index = parseInt(btn.dataset.index, 10);
+        openLightbox(group, index);
+      });
+    });
+
+    btnClose.addEventListener('click', closeLightbox);
+    btnPrev.addEventListener('click', () => showNext(-1));
+    btnNext.addEventListener('click', () => showNext(1));
+
+    // Close on click outside image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // ESC / arrows
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showNext(-1);
+      if (e.key === 'ArrowRight') showNext(1);
+    });
   </script>
 
 </body>
 </html>
-
-
