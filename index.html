@@ -4,249 +4,229 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Innovative garnhalere og dekksutstyr for fiskebåter." />
-  <title>Fiskeriteknikk AS – Garnhalere og dekksutstyr</title>
+  <title>Fiskeriteknikk</title>
+
+  <!-- Website Icon (Favicon) -->
+  <link rel="icon" type="image/png" href="https://iili.io/fdEziXI.th.png">
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- Restore default link blue + apply Inter -->
   <style>
-    [x-cloak] { display: none; }
+    * { font-family: 'Inter', sans-serif; }
+    a { color: -webkit-link; }
+    .blue-link { color: #0000EE !important; }
   </style>
 </head>
+
 <body class="font-sans text-gray-900 antialiased">
+
   <!-- Navigation -->
-  <nav x-data="{ open: false }" class="bg-blue-900 text-white">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#forside" class="text-2xl font-bold">Fiskeriteknikk AS</a>
-      <!-- Mobile menu button -->
-      <button @click="open = !open" :aria-expanded="open" aria-controls="primary-menu" aria-label="Meny" class="md:hidden focus:outline-none">
-        <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg x-show="open" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-          <path d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <!-- Menu Links -->
-      <ul id="primary-menu" :class="open ? 'block' : 'hidden'" class="md:flex md:items-center md:space-x-6">
-        <li><a href="#forside" class="block py-2 md:py-0 hover:text-orange-400">Forside</a></li>
-        <li><a href="#produkter" class="block py-2 md:py-0 hover:text-orange-400">Produkter</a></li>
-        <li><a href="#om-oss" class="block py-2 md:py-0 hover:text-orange-400">Om oss</a></li>
-        <li><a href="#kontakt" class="block py-2 md:py-0 hover:text-orange-400">Kontakt</a></li>
-        <li><a href="#faq" class="block py-2 md:py-0 hover:text-orange-400">FAQ</a></li>
+  <nav class="bg-white text-blue-900 sticky top-0 z-50 shadow">
+    <div class="container mx-auto px-4 py-3 flex items-center gap-4">
+
+      <!-- LOGO -->
+      <a href="#forside" class="flex-shrink-0">
+        <img src="https://iili.io/fdEziXI.th.png"
+             alt="Fiskeriteknikk A/S logo"
+             class="h-12 w-auto">
+      </a>
+
+      <!-- NAV LINKS (centered) -->
+      <ul class="flex flex-wrap flex-1 items-center justify-center gap-4 text-lg font-semibold tracking-wide">
+        <li><a href="#produkter">PRODUKTER</a></li>
+        <li><a href="#om-oss">OM OSS</a></li>
+        <li><a href="#kontakt">KONTAKT</a></li>
+
+        <!-- FACEBOOK ICON -->
+        <li>
+          <a href="https://www.facebook.com/fiskeriteknikk" target="_blank" aria-label="Fiskeriteknikk A/S på Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24" fill="currentColor"
+                 class="w-6 h-6">
+              <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 5 3.66 9.14 8.44 9.93v-7.03H8.08v-2.9h2.36V9.41c0-2.33 1.38-3.62 3.5-3.62.72 0 1.48.12 2.2.24v2.42h-1.24c-1.22 0-1.6.76-1.6 1.54v1.84h2.72l-.44 2.9h-2.28v7.03C18.34 21.21 22 17.07 22 12.07z"/>
+            </svg>
+          </a>
+        </li>
       </ul>
+
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section id="forside" class="relative">
-    <img src="https://placehold.co/1600x600?text=Hero+bilde" alt="Bilde av en fiskebåt på havet" class="w-full h-auto object-cover">
-    <div class="absolute inset-0 bg-blue-900/50"></div>
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-      <div class="max-w-3xl text-white">
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4 drop-shadow">Innovative løsninger for fiskebåter</h1>
-        <p class="text-xl mb-6 drop-shadow">Fiskeriteknikk AS utvikler skreddersydde garnhalere og dekksutstyr som gjør fiskerhverdagen enklere. Vi kombinerer lang erfaring fra sjøen med moderne design for å gi deg pålitelige løsninger til sjøs.</p>
-        <a href="#produkter" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded">Utforsk produktene</a>
+    <div class="relative h-[60vh] sm:h-[70vh]">
+
+      <img src="https://images.unsplash.com/photo-1652262676316-e2e4ec50bb5e?q=80&w=3870&auto=format&fit=crop"
+           alt="Fiskeriteknikk A/S hero image"
+           class="absolute inset-0 w-full h-full object-cover">
+
+      <div class="absolute inset-0 flex items-center justify-center px-4">
+        <div class="w-full max-w-3xl">
+
+          <div class="bg-blue-900/80 rounded-xl px-6 py-8 md:px-10 md:py-10 shadow-lg backdrop-blur-sm text-white text-center">
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+              Fiskeriteknikk A/S
+            </h1>
+
+            <!-- UPDATED SLOGAN -->
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 italic">
+              «Laget av fiskere, for fiskere!»
+            </h2>
+
+            <p class="text-base sm:text-lg md:text-xl mb-3 leading-relaxed">
+              Innovativt mekanisk verksted med fokus på fiskebåter!
+            </p>
+
+            <p class="text-base sm:text-lg md:text-xl mb-5 leading-relaxed">
+              Utvikler garnhalere og annet dekksutstyr.
+            </p>
+
+            <p class="text-base sm:text-lg mb-6 leading-relaxed">
+              Kontakt oss i dag for et godt tilbud!
+            </p>
+
+            <a href="#kontakt"
+               class="inline-block text-white font-semibold py-3 px-8 rounded-md text-base sm:text-lg"
+               style="background-color:#2596be;">
+              Kontakt
+            </a>
+
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Products Section -->
+  <!-- PRODUCTS -->
   <section id="produkter" class="bg-gray-50">
     <div class="container mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold mb-8">Produkter</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Product 1 -->
+      <h2 class="text-3xl font-bold mb-8 tracking-wide">PRODUKTER</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
         <article class="bg-white p-6 rounded shadow">
-          <img src="https://placehold.co/400x300?text=Garnhaler+600kg" alt="Garnhaler 600 kg" class="block mx-auto mb-4 w-full h-auto">
+          <img src="https://placehold.co/400x300?text=Garnhaler+600kg"
+               class="mb-4 w-full" alt="Garnhaler 600 kg">
           <h3 class="text-xl font-semibold mb-2">Garnhaler 600&nbsp;kg</h3>
-          <p class="text-gray-800">Kompakt garnhaler for mindre fiskebåter. Kapasitet opptil 600&nbsp;kg, med solid grep for effektiv haling.</p>
+          <p class="text-gray-800">Kompakt garnhaler for mindre fiskebåter. Kapasitet opptil 600&nbsp;kg.</p>
         </article>
-        <!-- Product 2 -->
+
         <article class="bg-white p-6 rounded shadow">
-          <img src="https://placehold.co/400x300?text=Garnhaler+1200kg" alt="Garnhaler 1200 kg" class="block mx-auto mb-4 w-full h-auto">
+          <img src="https://placehold.co/400x300?text=Garnhaler+1200kg"
+               class="mb-4 w-full" alt="Garnhaler 1200 kg">
           <h3 class="text-xl font-semibold mb-2">Garnhaler 1200&nbsp;kg</h3>
-          <p class="text-gray-800">Kraftig garnhaler for større kystfiskebåter. Konstruert for tungt garnarbeid, med trekkapasitet på 1200&nbsp;kg.</p>
+          <p class="text-gray-800">Kraftig garnhaler for større kystfiskebåter. Trekkapasitet 1200&nbsp;kg.</p>
         </article>
-        <!-- Product 3 -->
+
         <article class="bg-white p-6 rounded shadow">
-          <img src="https://placehold.co/400x300?text=Garngreier" alt="Garngreier" class="block mx-auto mb-4 w-full h-auto">
+          <img src="https://placehold.co/400x300?text=Garngreier"
+               class="mb-4 w-full" alt="Garngreier">
           <h3 class="text-xl font-semibold mb-2">Garngreier</h3>
-          <p class="text-gray-800">Forenkler garnhåndteringen ved haling. Automatiserer innsamling av garnet for å unngå floker og knuter.</p>
+          <p class="text-gray-800">Automatiserer innsamling av garnet og hindrer floker.</p>
         </article>
-        <!-- Product 4 -->
-        <article class="bg-white p-6 rounded shadow">
-          <img src="https://placehold.co/400x300?text=Dekksvinsj" alt="Hydraulisk dekksvinsj" class="block mx-auto mb-4 w-full h-auto">
-          <h3 class="text-xl font-semibold mb-2">Hydraulisk dekksvinsj</h3>
-          <p class="text-gray-800">Allsidig hydraulisk dekksvinsj (capstan). Perfekt for å trekke liner, teiner og andre tunge løft ombord.</p>
-        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- About Us Section -->
+  <!-- ABOUT -->
   <section id="om-oss">
     <div class="container mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold mb-6">Om oss</h2>
-      <p class="mb-6">Fiskeriteknikk AS ble etablert i 2016 i Lindesnes, lengst sør i Norge. Vi er et lite verksted som brenner for å lage godt utstyr til fiskeflåten. Med tette bånd til fiskermiljøet utvikler vi løsninger som er tilpasset virkeligheten på sjøen.</p>
+      <h2 class="text-3xl font-bold mb-6 tracking-wide">OM OSS</h2>
+      <p class="mb-6">
+        Fiskeriteknikk A/S ble etablert i 2016 i Lindesnes. Vi utvikler robust utstyr for fiskeflåten med fokus på kvalitet, trygghet og gode løsninger tilpasset hverdagen på sjøen.
+      </p>
+
       <h3 class="text-2xl font-semibold mb-4">Hvorfor velge oss?</h3>
       <ul class="list-disc pl-6 space-y-2">
-        <li><strong>Lang erfaring:</strong> Teamet vårt har bakgrunn fra fiskerinæringen og forstår utfordringene til sjøs.</li>
-        <li><strong>Kvalitet og pålitelighet:</strong> Vi leverer robust utstyr som tåler hard bruk, slik at du kan stole på det i lengden.</li>
-        <li><strong>Skreddersydde løsninger:</strong> Hvert oppdrag er unikt – vi tilpasser design og funksjonalitet etter dine behov.</li>
-        <li><strong>Personlig oppfølging:</strong> Vi er med deg hele veien – fra første kontakt til installasjon og i etterkant.</li>
+        <li><strong>Lang erfaring:</strong> Vi kjenner fiskerhverdagen.</li>
+        <li><strong>Kvalitet:</strong> Utstyret er bygget for å tåle hard bruk.</li>
+        <li><strong>Skreddersøm:</strong> Løsninger tilpasset ditt fartøy.</li>
+        <li><strong>Personlig service:</strong> Direkte kontakt og oppfølging.</li>
       </ul>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section id="kontakt" class="bg-gray-50">
     <div class="container mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold mb-8">Kontakt oss</h2>
-      <div class="md:grid md:grid-cols-2 md:gap-8">
-        <!-- Contact Info -->
-        <div class="mb-8 md:mb-0">
-          <p class="flex items-center mb-4"><svg class="w-6 h-6 mr-2 text-orange-600" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path></svg><strong>Adresse:</strong>&nbsp;Bålyveien 23, 4521 Lindesnes</p>
-          <p class="flex items-center mb-4"><svg class="w-6 h-6 mr-2 text-orange-600" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.89286 4.75H6.06818C5.34017 4.75 4.75 5.34017 4.75 6.06818C4.75 13.3483 10.6517 19.25 17.9318 19.25C18.6598 19.25 19.25 18.6598 19.25 17.9318V15.1071L16.1429 13.0357L14.5317 14.6468C14.2519 14.9267 13.8337 15.0137 13.4821 14.8321C12.8858 14.524 11.9181 13.9452 10.9643 13.0357C9.98768 12.1045 9.41548 11.1011 9.12829 10.494C8.96734 10.1537 9.06052 9.76091 9.32669 9.49474L10.9643 7.85714L8.89286 4.75Z"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5.02936C16.4312 5.72562 18.3396 7.65944 19 10.1056"></path></svg><strong>Telefon:</strong>&nbsp;<a href="tel:+4747905875" class="text-orange-600 hover:text-orange-800">479&nbsp;05&nbsp;875</a></p>
-          <p class="flex items-center mb-4"><svg class="w-6 h-6 mr-2 text-orange-600" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path d="M3 7l9 6l9 -6"></path></svg><strong>E-post:</strong>&nbsp;<a href="mailto:post@fiskeriteknikk.no" class="text-orange-600 hover:text-orange-800">post@fiskeriteknikk.no</a></p>
+      <h2 class="text-3xl font-bold mb-8 tracking-wide">KONTAKT</h2>
+
+      <div class="space-y-8">
+
+        <!-- INFO + MAP -->
+        <div>
+          <div class="space-y-3">
+            <p><span class="font-semibold">Adresse:</span> Bålyveien 23, 4521 Spangereid</p>
+            <p><span class="font-semibold">Telefon:</span> <a class="blue-link" href="tel:+4747905875">47905875</a></p>
+            <p><span class="font-semibold">E-post:</span> <a class="blue-link" href="mailto:post@fiskeriteknikk.no">post@fiskeriteknikk.no</a></p>
+          </div>
+
           <div class="mt-8">
-            <img src="https://placehold.co/600x400?text=Kart" alt="Kart som viser beliggenheten til Fiskeriteknikk AS" class="w-full h-auto rounded">
+            <!-- MAP -->
+            <iframe
+              width="100%"
+              height="350"
+              style="border:0; border-radius: 8px;"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=B%C3%A5lyveien+23,+4521+Spangereid&hl=no&z=14&output=embed">
+            </iframe>
           </div>
         </div>
-        <!-- Contact Form -->
+
+        <!-- FORM -->
         <div>
-          <form>
+          <form
+            action="https://formspree.io/f/mnnwpzjw"
+            method="POST"
+            class="bg-white p-6 rounded shadow space-y-4"
+          >
             <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
-              <div class="mb-4">
-                <label for="navn" class="block font-medium mb-1">Navn</label>
-                <input type="text" id="navn" name="navn" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-orange-500" />
+              <div>
+                <label class="block font-medium mb-1" for="navn">Navn</label>
+                <input id="navn" name="navn" required
+                       class="w-full border px-3 py-2 rounded" />
               </div>
-              <div class="mb-4">
-                <label for="email" class="block font-medium mb-1">E-post</label>
-                <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-orange-500" />
-              </div>
-              <div class="mb-4 md:col-span-2">
-                <label for="melding" class="block font-medium mb-1">Melding</label>
-                <textarea id="melding" name="melding" rows="4" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-orange-500"></textarea>
+              <div>
+                <label class="block font-medium mb-1" for="email">E-post</label>
+                <input id="email" name="email" type="email" required
+                       class="w-full border px-3 py-2 rounded" />
               </div>
             </div>
-            <button type="submit" class="bg-blue-900 text-white font-medium py-2 px-6 rounded hover:bg-blue-800">Send</button>
+
+            <div>
+              <label class="block font-medium mb-1" for="melding">Melding</label>
+              <textarea id="melding" name="message" rows="5" required
+                        class="w-full border px-3 py-2 rounded"></textarea>
+            </div>
+
+            <button type="submit"
+                    class="bg-blue-900 text-white py-2 px-6 rounded hover:bg-blue-800">
+              Send
+            </button>
           </form>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="bg-gray-50">
-    <div class="container mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold mb-6">FAQ</h2>
-      <div class="space-y-4">
-        <div x-data="{ open: false }" class="border-b pb-2">
-          <button @click="open = !open" class="w-full text-left flex justify-between items-center py-2 focus:outline-none">
-            <span class="font-medium">Hvilke båtstørrelser passer garnhalerne for?</span>
-            <span x-show="!open">+</span>
-            <span x-show="open">−</span>
-          </button>
-          <div x-show="open" x-transition class="mt-2 pl-2 text-gray-800">
-            Vi tilbyr garnhalere i ulike størrelser som passer alt fra små sjarker til større kystfiskebåter. Våre modeller på 600&nbsp;kg og 1200&nbsp;kg dekker de fleste behov, men vi kan også skreddersy løsninger etter båtens størrelse.
-          </div>
-        </div>
-        <div x-data="{ open: false }" class="border-b pb-2">
-          <button @click="open = !open" class="w-full text-left flex justify-between items-center py-2 focus:outline-none">
-            <span class="font-medium">Leverer dere skreddersydde løsninger?</span>
-            <span x-show="!open">+</span>
-            <span x-show="open">−</span>
-          </button>
-          <div x-show="open" x-transition class="mt-2 pl-2 text-gray-800">
-            Ja, vi forstår at alle båter og fiskere har unike behov. Vi tilbyr skreddersydd tilpasning av våre garnhalere og annet utstyr, og kan også utvikle spesialløsninger i tett dialog med kunden.
-          </div>
-        </div>
-        <div x-data="{ open: false }" class="border-b pb-2">
-          <button @click="open = !open" class="w-full text-left flex justify-between items-center py-2 focus:outline-none">
-            <span class="font-medium">Hjelper dere med montering og installasjon?</span>
-            <span x-show="!open">+</span>
-            <span x-show="open">−</span>
-          </button>
-          <div x-show="open" x-transition class="mt-2 pl-2 text-gray-800">
-            Absolutt. Vi kan bistå med montering av utstyret om ønskelig. Vi gir også detaljert veiledning slik at du kan montere selv, og tilbyr support dersom du støter på problemer.
-          </div>
-        </div>
-        <div x-data="{ open: false }" class="border-b pb-2">
-          <button @click="open = !open" class="w-full text-left flex justify-between items-center py-2 focus:outline-none">
-            <span class="font-medium">Hva slags vedlikehold trenger utstyret?</span>
-            <span x-show="!open">+</span>
-            <span x-show="open">−</span>
-          </button>
-          <div x-show="open" x-transition class="mt-2 pl-2 text-gray-800">
-            Våre garnhalere og dekksutstyr er designet for å tåle røffe forhold med minimalt vedlikehold. Vi anbefaler likevel jevnlig rengjøring og smøring av bevegelige deler, samt å følge våre vedlikeholdsinstruksjoner for lengst mulig levetid.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center text-sm py-4">
-    &copy; 2025 Fiskeriteknikk AS. Alle rettigheter reservert.
+  <!-- FOOTER -->
+  <footer class="bg-blue-900 text-white text-center py-4 text-sm">
+    © <span id="year"></span> Fiskeriteknikk A/S. Alle rettigheter reservert.
   </footer>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Fiskeriteknikk AS",
-    "description": "Innovativt mekanisk verksted for fiskeb\u00e5ter som utvikler garnhalere og dekksutstyr.",
-    "telephone": "+4747905875",
-    "email": "post@fiskeriteknikk.no",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "B\u00e5lyveien 23",
-      "addressLocality": "Lindesnes",
-      "postalCode": "4521",
-      "addressCountry": "NO"
-    },
-    "url": "http://www.fiskeriteknikk.no"
-  }
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Hvilke b\u00e5tst\u00f8rrelser passer garnhalerne for?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Vi tilbyr garnhalere i ulike st\u00f8rrelser som passer alt fra sm\u00e5 sjarker til st\u00f8rre kystfiskeb\u00e5ter. V\u00e5re modeller p\u00e5 600 kg og 1200 kg dekker de fleste behov, men vi kan ogs\u00e5 skreddersy l\u00f8sninger etter b\u00e5tens st\u00f8rrelse."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Leverer dere skreddersydde l\u00f8sninger?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, vi forst\u00e5r at alle b\u00e5ter og fiskere har unike behov. Vi tilbyr skreddersydd tilpasning av v\u00e5re garnhalere og annet utstyr, og kan ogs\u00e5 utvikle spesiall\u00f8sninger i tett dialog med kunden."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hjelper dere med montering og installasjon?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutt. Vi kan bist\u00e5 med montering av utstyret om \u00f8nskelig. Vi gir ogs\u00e5 detaljert veiledning slik at du kan montere selv, og tilbyr support dersom du st\u00f8ter p\u00e5 problemer."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hva slags vedlikehold trenger utstyret?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "V\u00e5re garnhalere og dekksutstyr er designet for \u00e5 t\u00e5le r\u00f8ffe forhold med minimalt vedlikehold. Vi anbefaler likevel jevnlig rengj\u00f8ring og sm\u00f8ring av bevegelige deler, samt \u00e5 f\u00f8lge v\u00e5re vedlikeholdsinstruksjoner for lengst mulig levetid."
-        }
-      }
-    ]
-  }
-  </script>
+
 </body>
 </html>
