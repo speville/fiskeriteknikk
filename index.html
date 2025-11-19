@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Innovative garnhalere og dekksutstyr for fiskebåter." />
+  <title>Fiskeriteknikk</title>
+
+  <!-- Website Icon (Favicon) -->
+  <link rel="icon" type="image/png" href="https://iili.io/fdEziXI.th.png">
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Restore default link blue + apply Inter -->
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    a { color: -webkit-link; }
+    .blue-link { color: #0000EE !important; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-900 antialiased flex flex-col min-h-screen pb-16">
+
+  <!-- Navigation -->
+  <nav class="bg-white text-blue-900 sticky top-0 z-50 shadow">
+    <div class="container mx-auto px-4 py-3 flex flex-col items-center gap-3">
+
+      <!-- LOGO -->
+      <a href="#forside">
+        <img src="https://iili.io/fdEziXI.th.png"
+             alt="Fiskeriteknikk A/S logo"
+             class="h-12 w-auto mx-auto">
+      </a>
+
+      <!-- NAV LINKS centered in their own row -->
+      <ul class="flex items-center justify-center gap-6 text-lg font-semibold tracking-wide mt-2">
+        <li><a href="#produkter">PRODUKTER</a></li>
+        <li><a href="#om-oss">OM OSS</a></li>
+        <li><a href="#kontakt">KONTAKT</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main class="flex-1">
+    <!-- HERO -->
+    <section id="forside" class="relative">
+      <div class="relative h-[60vh] sm:h-[70vh]">
+
+        <img src="https://images.unsplash.com/photo-1652262676316-e2e4ec50bb5e?q=80&w=3870&auto=format&fit=crop"
+             alt="Fiskeriteknikk A/S hero image"
+             class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 flex items-center justify-center px-4">
+          <div class="w-full max-w-3xl">
+
+            <div class="bg-blue-900/80 rounded-xl px-6 py-8 md:px-10 md:py-10 shadow-lg backdrop-blur-sm text-white text-center">
+
+              <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                FISKERITEKNIKK
+              </h1>
+
+              <!-- SLOGAN -->
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 italic">
+                «Laget av fiskere, for fiskere!»
+              </h2>
+
+              <p class="text-base sm:text-lg md:text-xl mb-3 leading-relaxed">
+                Innovativt mekanisk verksted med fokus på fiskebåter!
+              </p>
+
+              <p class="text-base sm:text-lg md:text-xl mb-5 leading-relaxed">
+                Utvikler garnhalere og annet dekksutstyr.
+              </p>
+
+              <p class="text-base sm:text-lg mb-6 leading-relaxed">
+                Kontakt oss i dag for et godt tilbud!
+              </p>
+
+              <a href="#kontakt"
+                 class="inline-block text-white font-semibold py-3 px-8 rounded-md text-base sm:text-lg"
+                 style="background-color:#2596be;">
+                Kontakt
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="produkter" class="bg-gray-50">
+      <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-8 tracking-wide">Produkter</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <article class="bg-white p-6 rounded shadow">
+            <img src="https://placehold.co/400x300?text=Garnhaler+600kg"
+                 class="mb-4 w-full" alt="Garnhaler 600 kg">
+            <h3 class="text-xl font-semibold mb-2">Garnhaler 600&nbsp;kg</h3>
+            <p class="text-gray-800">Kompakt garnhaler for mindre fiskebåter. Kapasitet opptil 600&nbsp;kg.</p>
+          </article>
+
+          <article class="bg-white p-6 rounded shadow">
+            <img src="https://placehold.co/400x300?text=Garnhaler+1200kg"
+                 class="mb-4 w-full" alt="Garnhaler 1200 kg">
+            <h3 class="text-xl font-semibold mb-2">Garnhaler 1200&nbsp;kg</h3>
+            <p class="text-gray-800">Kraftig garnhaler for større kystfiskebåter. Trekkapasitet 1200&nbsp;kg.</p>
+          </article>
+
+          <article class="bg-white p-6 rounded shadow">
+            <img src="https://placehold.co/400x300?text=Garngreier"
+                 class="mb-4 w-full" alt="Garngreier">
+            <h3 class="text-xl font-semibold mb-2">Garngreier</h3>
+            <p class="text-gray-800">Automatiserer innsamling av garnet og hindrer floker.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="om-oss">
+      <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-6 tracking-wide">Om oss</h2>
+        <p class="mb-6">
+          Fiskeriteknikk A/S ble etablert i 2016 i Lindesnes. Vi utvikler robust utstyr for fiskeflåten med fokus på kvalitet, trygghet og gode løsninger tilpasset hverdagen på sjøen.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">Hvorfor velge oss?</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Lang erfaring:</strong> Vi kjenner fiskerhverdagen.</li>
+          <li><strong>Kvalitet:</strong> Utstyret er bygget for å tåle hard bruk.</li>
+          <li><strong>Skreddersøm:</strong> Løsninger tilpasset ditt fartøy.</li>
+          <li><strong>Personlig service:</strong> Direkte kontakt og oppfølging.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="kontakt" class="bg-gray-50">
+      <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-8 tracking-wide">Kontakt</h2>
+
+        <div class="space-y-8">
+
+          <!-- INFO + MAP -->
+          <div>
+            <div class="space-y-3">
+              <p><span class="font-semibold">Adresse:</span> Bålyveien 23, 4521 Spangereid</p>
+              <p><span class="font-semibold">Telefon:</span> <a class="blue-link" href="tel:+4747905875">47905875</a></p>
+              <p><span class="font-semibold">E-post:</span> <a class="blue-link" href="mailto:post@fiskeriteknikk.no">post@fiskeriteknikk.no</a></p>
+            </div>
+
+            <div class="mt-8">
+              <!-- MAP -->
+              <iframe
+                width="100%"
+                height="350"
+                style="border:0; border-radius: 8px;"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=B%C3%A5lyveien+23,+4521+Spangereid&hl=no&z=14&output=embed">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- FORM -->
+          <div>
+            <form
+              action="https://formspree.io/f/mnnwpzjw"
+              method="POST"
+              class="bg-white p-6 rounded shadow space-y-4"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+                <div>
+                  <label class="block font-medium mb-1" for="navn">Navn</label>
+                  <input id="navn" name="navn" required
+                         class="w-full border px-3 py-2 rounded" />
+                </div>
+                <div>
+                  <label class="block font-medium mb-1" for="email">E-post</label>
+                  <input id="email" name="email" type="email" required
+                         class="w-full border px-3 py-2 rounded" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-medium mb-1" for="melding">Melding</label>
+                <textarea id="melding" name="message" rows="5" required
+                          class="w-full border px-3 py-2 rounded"></textarea>
+              </div>
+
+              <button type="submit"
+                      class="bg-blue-900 text-white py-2 px-6 rounded hover:bg-blue-800">
+                Send
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- STICKY FOOTER -->
+  <footer class="fixed bottom-0 left-0 right-0 bg-blue-900 text-white text-sm shadow-inner">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <p>
+        © <span id="year"></span> Fiskeriteknikk A/S
+      </p>
+
+      <!-- FB ICON in footer on the right -->
+      <a href="https://www.facebook.com/fiskeriteknikk"
+         target="_blank"
+         aria-label="Fiskeriteknikk A/S på Facebook"
+         class="flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24" fill="currentColor"
+             class="w-6 h-6">
+          <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 5 3.66 9.14 8.44 9.93v-7.03H8.08v-2.9h2.36V9.41c0-2.33 1.38-3.62 3.5-3.62.72 0 1.48.12 2.2.24v2.42h-1.24c-1.22 0-1.6.76-1.6 1.54v1.84h2.72l-.44 2.9h-2.28v7.03C18.34 21.21 22 17.07 22 12.07z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
+
+
