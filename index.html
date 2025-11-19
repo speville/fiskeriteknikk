@@ -7,11 +7,12 @@
   <title>Fiskeriteknikk</title>
 
   <link rel="icon" type="image/png" href="https://iili.io/fdEziXI.th.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    * { font-family: 'Inter', sans-serif; }
+    * { font-family: 'Rubik', sans-serif; }
     a { color: -webkit-link; }
     .blue-link { color: #0000EE !important; }
   </style>
@@ -59,11 +60,11 @@
     <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white">
       <div class="container mx-auto px-4 py-3">
         <ul class="flex flex-col gap-3 text-base font-semibold">
-          <li><a href="#forside"  class="block">Forside</a></li>
-          <li><a href="#produkter" class="block">Produkter</a></li>
-          <li><a href="#galleri"   class="block">Galleri</a></li>
-          <li><a href="#om-oss"    class="block">Om oss</a></li>
-          <li><a href="#kontakt"   class="block">Kontakt</a></li>
+          <li><a href="#forside"  class="block">FORSIDE</a></li>
+          <li><a href="#produkter" class="block">PRODUKTER</a></li>
+          <li><a href="#galleri"   class="block">GALLERI</a></li>
+          <li><a href="#om-oss"    class="block">OM OSS</a></li>
+          <li><a href="#kontakt"   class="block">KONTAKT</a></li>
         </ul>
       </div>
     </div>
@@ -75,22 +76,33 @@
     <section id="forside" class="relative">
       <div class="relative h-[60vh] sm:h-[70vh]">
 
-        <img src="https://images.unsplash.com/photo-1652262676316-e2e4ec50bb5e?q=80&w=3870&auto=format&fit=crop"
+        <!-- Use FULL-SIZE hero image here (not the .md thumbnail) -->
+        <img src="test.png"
              alt="Fiskeriteknikk A/S hero image"
-             class="absolute inset-0 w-full h-full object-cover">
+             class="absolute inset-0 w-full h-full object-cover object-center">
 
         <div class="absolute inset-0 flex items-center justify-center px-4">
-          <div class="w-full max-w-3xl bg-blue-900/80 rounded-xl px-6 py-10 shadow-lg backdrop-blur-sm text-white text-center">
+          <div class="w-full max-w-3xl bg-white/60 rounded-xl px-6 py-10 shadow-lg backdrop-blur-sm text-center">
 
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">FISKERITEKNIKK</h1>
-            <h2 class="text-xl sm:text-2xl md:text-3xl italic mb-4">«Laget av fiskere, for fiskere!»</h2>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-[#105089]">
+              FISKERITEKNIKK
+            </h1>
+            <h2 class="text-xl sm:text-2xl md:text-3xl mb-4 text-gray-800">
+              « Laget av fiskere, for fiskere! »
+            </h2>
 
-            <p class="text-lg md:text-xl mb-3">Innovativt mekanisk verksted med fokus på fiskebåter!</p>
-            <p class="text-lg md:text-xl mb-5">Utvikler garnhalere og annet dekksutstyr.</p>
+            <p class="text-lg md:text-xl mb-4 text-gray-900">
+              Innovativt mekanisk verksted med fokus på fiskebåter!
+            </p>
+            <p class="text-lg md:text-xl mb-4 text-gray-900">
+              Utvikler garnhalere og annet dekksutstyr.
+            </p>
 
             <a href="#kontakt"
                class="inline-block text-white font-semibold py-3 px-8 rounded-md"
-               style="background-color:#2596be;">Kontakt</a>
+               style="background-color:#2596be;">
+              Kontakt
+            </a>
 
           </div>
         </div>
@@ -163,7 +175,7 @@
     <section id="om-oss">
       <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold mb-6 tracking-wide">Om oss</h2>
-        <p class="mb-6">
+      <p class="mb-6">
           Fiskeriteknikk A/S ble etablert i 2016 i Lindesnes. Vi utvikler robust utstyr for fiskeflåten med fokus på
           kvalitet, trygghet og gode løsninger tilpasset hverdagen på sjøen.
         </p>
